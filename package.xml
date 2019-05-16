@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>experiment</name>
+  <name>simple_experiment</name>
   <version>0.0.0</version>
   <description>The experiment package</description>
 
