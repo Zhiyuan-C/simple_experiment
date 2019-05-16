@@ -1,4 +1,4 @@
-#1/usr/bin/env python
+#!/usr/bin/env python
 
 import rospy
 from std_msgs.msg import String
@@ -12,15 +12,16 @@ def talker():
     end_time = start_time + 30
     change_pub = False
     constent_pub = "no object"
-    while not change_pub and not rospy.is_shutdown():
-        pub.publish("moving")
-        rate.sleep
     while not rospy.is_shutdown():
+        pub2.publish(constent_pub)
         current_time = rospy.get_time()
-        if current_time == end_time:
+        if not change_pub:
+            pub.publish("moving")
+        if current_time > end_time:
             constent_pub = "object"
             change_pub = True
         rate.sleep
+
     
 if __name__ == '__main__':
     try:
